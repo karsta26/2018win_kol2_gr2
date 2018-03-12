@@ -21,3 +21,27 @@
 #
 #Your program must be runnable with command "python task.py".
 #Show some usecases of your library in the code (print some things)
+
+from Student import Student
+from Course import Course
+
+if __name__ == '__main__':
+	student1 = Student("Mike","Tyson")
+	student2 = Student("Ann","Tiger")
+
+	course1 = Course("Biology")
+	course1.add_student(student1)
+	course1.add_student(student2)
+
+	course1.add_score(student1, 3)
+	course1.add_score(student1, 5)
+	course1.add_score(student2, 2)
+
+	course1.add_attendance(student1)
+	course1.add_attendance(student1)
+	course1.add_attendance(student2)
+
+	print(course1.get_all_students_average_score())
+	print(course1.get_student_average_score(student1))
+	print(course1.total_attendance_of_students())
+
